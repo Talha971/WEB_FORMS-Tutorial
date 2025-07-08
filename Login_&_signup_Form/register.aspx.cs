@@ -13,5 +13,10 @@ namespace Login___signup_Form
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
