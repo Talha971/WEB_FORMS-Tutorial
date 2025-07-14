@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="Login___signup_Form.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="Login___signup_Form.register" %>
 
 <!DOCTYPE html>
 
@@ -44,7 +44,7 @@
                         <br />
                         First Name&nbsp; </td>
                     <td>
-                        <asp:TextBox ID="FirstnameTextBox" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="FirstNameTextBox" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" Display="Dynamic" ErrorMessage="First Name Required" ForeColor="Red" SetFocusOnError="True" ControlToValidate="FirstnameTextBox">*</asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -101,13 +101,18 @@
       <td>
           <asp:TextBox ID="ConfirmPasswordTextBox" runat="server"></asp:TextBox>
                       <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" Display="Dynamic" ErrorMessage="Please Enter Confirm Password" ForeColor="Red" SetFocusOnError="True" ControlToValidate="ConfirmPasswordTextBox">*</asp:RequiredFieldValidator>
-                      <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="PasswordTextBox" ControlToValidate="ConfirmPasswordTextBox" Display="Dynamic" ErrorMessage="Password is not identical" ForeColor="Red" SetFocusOnError="True"></asp:CompareValidator>
+                      <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="PasswordTextBox" ControlToValidate="ConfirmPasswordTextBox" Display="Dynamic" ErrorMessage="Password is not identical" ForeColor="Red" SetFocusOnError="True">*</asp:CompareValidator>
                       </td>
   </tr>
                   <tr class="btn-container">
       <td class="auto-style2" colspan="2" >
           <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Signup" />
                       </td>
+  </tr>
+                  <tr class="btn-container">
+      <td class="auto-style2" colspan="2" >
+          <a href="login.aspx">Got to login</a>
+      </td>
   </tr>
                   </table>
             <asp:ValidationSummary ID="ValidationSummary1" runat="server" BackColor="#CCCCCC" Font-Size="Large" />

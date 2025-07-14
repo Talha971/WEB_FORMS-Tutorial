@@ -21,7 +21,7 @@ namespace Login___signup_Form
         protected void LoginButton_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(cs);
-            string query = "SELECT * FROM login WHERE username = @user AND password = @pass";
+            string query = "SELECT * FROM signup WHERE username = @user AND password = @pass";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.Parameters.AddWithValue("@user", UserTextBox.Text);
             cmd.Parameters.AddWithValue("@pass", PassTextBox.Text);
