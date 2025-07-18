@@ -13,5 +13,10 @@ namespace CRUD_Gridview_Webforms
         {
 
         }
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
     }
 }
